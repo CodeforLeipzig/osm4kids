@@ -2,7 +2,7 @@
   "name": "osm4kids",
   "version": "0.0.0",
   "description": "osm4kids",
-  "main": "app.js",
+  "main": "index.js",
   "author": {
     "name": "ns",
     "email": ""
