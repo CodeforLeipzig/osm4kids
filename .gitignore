@@ -1,0 +1,7 @@
+typings.json
+tsd.json
+app.js
+node_modules/
+bin/
+obj/
+typings/
