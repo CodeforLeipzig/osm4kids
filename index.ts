@@ -1,35 +1,32 @@
 ﻿/// <reference path="typings/main.d.ts" />
 
-var _ = require('lodash');
-
+// declare
+import _ = require('lodash');
 var fs = require('fs');
-// call the packages we need
-var express = require('express');        // call express
-var app = express();                 // define our app using express
+import express = require('express');        // call express
+
+
+var app:any = express();                 // define our app using express
 var bodyParser = require('body-parser');
 
-// configure app to use bodyParser()
-// this will let us get the data from a POST
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-//var port = process.env.PORT || 8080;        // set our port
 
-// ROUTES FOR OUR API
-// =============================================================================
-
+// routes
 app.use('/api/playgrounds', function (req, res, next) {
-    var transformed = transformer(JSON.parse(fs.readFileSync('./data/playgrounds_center_short.geojson')));
+    var transformed = transformer(JSON.parse(fs.readFileSync('./resources/playgrounds_center_short.geojson')));
     res.json(transformed);
-    delete transformed;
+    //delete transformed;
 });
 
 app.use('/api/schools', function (req, res, next) {
-    var transformed = transformer(JSON.parse(fs.readFileSync('./data/schools_center_short.geojson')));
+    var transformed = transformer(JSON.parse(fs.readFileSync('./resources/schools_center_short.geojson')));
     res.json(transformed);
-    delete transformed;
+    //delete transformed;
 });
 
+// functions
 function transformer(data) {
 
     var retArr = []
@@ -42,7 +39,7 @@ function transformer(data) {
                 longitude: element['lon']
             });
         }
-        else if (element["type"] == "way" && (typeof element['center'] != "undefined")) { // Ist vom Typ way und besitzt ein ein Center-Element
+        else if (element["type"] == "way" && (typeof element['center'] != "undefined")) { // type is way and not empty
             retArr.push({
                 id: element['id'],
                 latitude: element['center']['lat'],
@@ -58,7 +55,6 @@ function transformer(data) {
     return retArr;              // The function returns the product of p1 and p2
 }
 
-// START THE SERVER
-// =============================================================================
+// start server
 app.listen(8888);
 console.log('Magic happens on port ' + 8888);

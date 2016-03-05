@@ -1,9 +1,1 @@
-Einleitung
-
-unter welchen ordner liegen welche Daten
-
-npm
-
-typings
-
-Build:  -> tsc ... node
+# OSM4kids (aka Kidsle)## IntroductionNew kidsle backend based on nodejs and OSM Data## Requirements### npm PackagesInstall all packages where definite in the package.json```sh# npm install```### typingsTo have autoccomplete (intellisense) in your editor, you need typescript definitions (d.ts).```sh# npm install typings```To install the Typescript-defintions you need:```shell# typings install --save --ambient node# typings install --save --ambient lodash# typings install --save --ambient express# typings install --save --ambient serve-static# typings install --save --ambient mime# typings install --save --ambient body-parser```insert in your .ts-file to have autocomplete```xml/// <reference path="typings/main.d.ts" />```## how to run ...Build:  -> tsc ... node

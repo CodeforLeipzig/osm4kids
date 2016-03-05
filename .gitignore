@@ -1,7 +1,13 @@
-typings.json
-tsd.json
-app.js
+# folder
 node_modules/
 bin/
 obj/
 typings/
+.idea/
+
+# files
+typings.json
+index.js
+index.js.map
+
+
