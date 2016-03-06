@@ -5,13 +5,11 @@ import _ = require('lodash');
 var fs = require('fs');
 import express = require('express');        // call express
 
-
-var app:any = express();                 // define our app using express
+var app = express();                 // define our app using express
 var bodyParser = require('body-parser');
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-
 
 // routes
 app.use('/api/playgrounds', function (req, res, next) {
@@ -29,7 +27,7 @@ app.use('/api/schools', function (req, res, next) {
 // functions
 function transformer(data) {
 
-    var retArr = []
+    var retArr = [];
 
     _(data['elements']).forEach(function (element) {
         if (element["type"] == "node") {
