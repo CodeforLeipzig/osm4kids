@@ -1,0 +1,299 @@
+<!--{% load compress %} {% load staticfiles %} {% load leaflet_tags %}-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        OSM4Kids
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' /><!--{% block styles %} {% if debug %}-->
+    <!-- This is the client-side way to compile less and an ok choice for local dev -->
+    <link rel="stylesheet/less" type="text/css" media="all" href="static/less/style.less" /> <!--{% else %} {% compress css %}-->
+    <!-- This is the nifty django-compressor way to compile your less files in css -->
+    <!--<link rel="stylesheet" type="text/less" media="all" href="static/less/style.less" />--> <!--{% endcompress %} {% endif %} {% endblock %}-->
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/static/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/static/favicon/m-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+</head>
+
+<body>
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+    <symbol viewBox="0 0 512 512" id="icon-layer">
+        <title>layer</title>
+        <g>
+            <g>
+                <g>
+                    <path d="M208.466,65.919c13.122-13.122,28.875-19.68,47.25-19.68c18.366,0,34.224,6.564,47.538,19.688
+        c13.305,13.127,19.973,29.064,19.973,47.822c0,19.131-5.624,41.061-16.882,65.811c-11.248,24.757-22.496,44.816-33.757,60.2
+        l-16.873,22.511c-1.874-2.247-4.319-5.448-7.313-9.561c-3.001-4.123-8.341-12.096-16.029-23.896
+        c-7.685-11.817-14.439-23.451-20.249-34.882c-5.811-11.437-11.16-24.683-16.037-39.682c-4.875-14.998-7.312-28.503-7.312-40.499
+        C188.775,94.991,195.333,79.054,208.466,65.919z M233.493,137.09c6.193,6.187,13.597,9.283,22.222,9.283
+        c8.628,0,16.127-3.098,22.502-9.283c6.367-6.185,9.563-13.596,9.563-22.222s-3.194-16.128-9.563-22.507
+        c-6.375-6.379-13.874-9.559-22.502-9.559c-8.625,0-16.03,3.188-22.222,9.559c-6.182,6.378-9.274,13.88-9.274,22.507
+        C224.219,123.488,227.311,130.906,233.493,137.09z" />
+                </g>
+            </g>
+        </g>
+        <g>
+            <polygon points="256.354,385.476 92.641,294.944 63.398,311.241 256,418.576 448.602,311.241 418.452,294.439   " />
+        </g>
+        <g>
+            <polygon points="256.354,436.16 92.069,345.313 63.398,361.291 256,468.627 448.602,361.291 419.02,344.805   " />
+        </g>
+        <path d="M316.013,187.236c-10.046,21.895-20.092,40.707-30.144,56.435c8.979,4.446,14.625,10.846,14.625,17.971
+  c0,13.429-20.014,24.314-44.704,24.314c-24.689,0-44.704-10.886-44.704-24.314c0-7.32,5.957-13.879,15.368-18.335
+  c-8.951-13.857-16.854-27.509-23.674-40.927c-2.394-4.712-4.718-9.697-6.982-14.913L63.399,261.824l192.955,106.701l192.248-107.97
+  L316.013,187.236z" />
+    </symbol>
+    <symbol viewBox="0 0 512 512" id="icon-locate">
+        <title>locate</title>
+        <circle cx="256.258" cy="256.152" r="51.044" />
+        <path d="M413.621,244.041c-5.896-77.229-67.729-139.062-144.96-144.962V39h-24.226v60.078
+  c-77.229,5.899-139.063,67.733-144.963,144.963H39.106v24.225h60.366c5.9,77.229,67.733,139.062,144.963,144.961v60.077h24.226
+  v-60.077c77.229-5.897,139.062-67.729,144.96-144.961h59.789v-24.225H413.621z M256.258,388.5
+  c-73.094,0-132.348-59.254-132.348-132.348c0-73.093,59.254-132.348,132.348-132.348c73.094,0,132.348,59.254,132.348,132.348
+  C388.606,329.246,329.353,388.5,256.258,388.5z" />
+    </symbol>
+</svg>
+    <div class="navmenu navmenu-default navmenu-fixed-left">
+        <div class="navmenu-brand">
+            <h1>Kids in Leipzig</h1>
+        </div>
+
+        <div class="filter">
+            <!--{% if 'daycare' in active_apps %}-->
+            <!--<button id="kit" type="button" class="btn btn-lg btn-primary btn-block">Kitas ausblenden</button>-->
+            <!--{% endif %}-->
+
+            <!--{% if 'playgrounds' in active_apps %}-->
+            <button id="play" type="button" class="btn btn-lg btn-primary btn-block">Spielplätze ausblenden</button>
+            <!--{% endif %}-->
+
+            <!--{% if 'schools' in active_apps %}-->
+            <!--<button id="school" type="button" class="btn btn-lg btn-primary btn-block">Schulen ausblenden</button>-->
+            <!--{% endif %}-->
+        </div>
+
+        <div class="statics">
+            <button id="contact" type="button" class="btn btn-lg btn-link btn-block">Kontakt</button>
+            <button id="imprint" type="button" class="btn btn-lg btn-link btn-block">Impressum</button>
+        </div>
+    </div>
+
+    <div class="canvas">
+        <div class="navbar navbar-default navbar-fixed-top">
+            <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-recalc="false" data-target=".navmenu" data-canvas=".canvas">
+                <svg class="icon-kid icon-sm ">
+                            <use xlink:href="#icon-layer" />
+                        </svg>
+            </button>
+            <button id="locate" type="button" class="navbar-toggle">
+                <svg class="icon-kid icon-sm ">
+                            <use xlink:href="#icon-locate" />
+                        </svg>
+            </button>
+        </div>
+
+
+
+
+        <div class="container">
+
+
+            <div id="map" class="leaflet-container-default"></div>
+            <script type="text/javascript">
+                (function () {
+
+                    function loadmap() {
+                        var djoptions = {"attributionprefix": "<a href=\"https://www.mapbox.com/about/maps/\" target=\"_blank\">\u00a9 Mapbox \u00a9 OpenStreetMap</a>", "maxzoom": 18, "minzoom": 0, "extent": [[-90, -180], [90, 180]], "minimap": false, "fitextent": true, "zoom": 15, "center": [51.34, 12.37], "srid": null, "tilesextent": [], "scale": "metric", "resetview": false, "layers": [["Hintergrund", "    http://api.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidGhlbWFrZXJtYWZpYSIsImEiOiJ1TTNqazF3In0.diqXR455aEg5yfGD-CTgPg", ""]]},
+                                options = {djoptions: djoptions, initfunc: loadmap,
+                                    globals: false, callback: window.setUpMap};
+                        L.Map.djangoMap('map', options);
+                    }
+                    var loadevents = ["load"];
+                    if (loadevents.length === 0) loadmap();
+                    else if (window.addEventListener) for (var i=0; i<loadevents.length; i++) window.addEventListener(loadevents[i], loadmap, false);
+                    else if (window.jQuery) jQuery(window).on(loadevents.join(' '), loadmap);
+
+                })();
+            </script>
+
+        </div>
+        <!-- /.container -->
+
+
+
+    </div>
+    <!-- /.canvas  -->
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close pull-right" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="contactModal">Kontakt</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Ihr habt Fragen oder Anregungen?</p>
+                    <p>Ihr könnt uns dazu gerne eine Email schreiben <a href="mailto:kidsle@offenesleipzig.de">kidsle@offenesleipzig.de</a>.</p>
+
+                    <p>Wenn ihr direkt zur Verbesserung von kidsle beitragen wollt, findet ihr den Code bei <a href="https://github.com/CodeforLeipzig/kidsle">Github</a>.</p>
+                </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Schliessen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal fade" id="imprintModal" tabindex="-1" role="dialog" aria-labelledby="imprintModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close pull-right" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="imprintModal">Impressum</h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <h1 class="">Impressum</h1>
+                    <div class="post-91 page type-page status-publish hentry">
+                        <div class="entry">
+                            <p>&nbsp;</p>
+                            <p>Open Knowledge Foundation Deutschland e.V.
+                                <br> Schlesische Str. 6
+                                <br> 10997 Berlin
+                                <br> Deutschland
+                                <br>
+                            </p>
+                            <p>OKF DE Büro
+                                <br> Singerstr. 109, 10179 Berlin
+                                <br>
+                                <a href="http://goo.gl/maps/J4n0U">http://goo.gl/maps/J4n0U</a>
+                                <br>
+                            </p>
+                            <p>Vereinsregister Nr: VR 30468 B
+                                <br> Steuernummer: 27/674/52428
+                                <br> VAT: DE278022128
+                                <br>
+                            </p>
+                            <p>Kontakt: info@okfn.de +49 30 57703666-0 Fax: +49 30 57703666-9</p>
+                            <p>&nbsp;</p>
+                            <h2>Haftungsausschluss</h2>
+                            <p>Inhaltlich verantwortlich gemäß § 55 Abs. 2 RStV ist der jeweilige Autor eines Textes.</p>
+                            <h3>Haftung für Inhalte</h3>
+                            <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach § 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+                            <h3>Haftung für Links</h3>
+                            <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+                            <h2>Urheberrecht</h2>
+                            <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Sie sind mit einer Creative Commons Lizenz urheberrechtlich geschützt. Sofern nicht anders angegeben, stehen die Inhalte dieser Seite unter der <a href="http://creativecommons.org/licenses/by/3.0/de/">Creative Commons Namensnennung 3.0 DE Lizenz</a>. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+                            <h2>Datenschutzerklärung</h2>
+                            <p>I. Datenerhebung und Datenverarbeitung</p>
+                            <p>Die Sicherheit Ihrer Daten hat bei uns höchste Priorität. Wir ergreifen jede nur mögliche Maßnahme, um Ihre persönlichen Daten vor unbefugtem Zugriff zu schützen. Sämtliche Anforderungen des Bundesdatenschutzgesetzes (BDSG), Telemediengesetzes (TMG) sowie alle weiteren datenschutzrechtlichen Vorschriften werden von uns eingehalten. Sie können unsere Seite besuchen, ohne Angaben zu Ihrer Person zu machen. Wir speichern dann lediglich Zugriffsdaten ohne Personenbezug. Dabei handelt es sich z.B. um Daten</p>
+                            <ul>
+                                <li>der Rechneradresse (IP-Adresse) in gekürzter Form,</li>
+                                <li>der Seite, von der aus die Datei angefordert wurde,</li>
+                                <li>dem Namen der übertragenen Datei,</li>
+                                <li>dem Datum und der Uhrzeit der Abfrage,</li>
+                                <li>der übertragenen Datenmenge,</li>
+                                <li>dem Zugriffsstatus (Datei übertragen, Datei nicht gefunden etc.) und</li>
+                                <li>einer Beschreibung des Typs des verwendeten Webbrowsers.</li>
+                            </ul>
+                            <p>Diese Daten werden ausschließlich zur Verbesserung unseres Angebotes ausgewertet und erlauben keine Rückschlüsse auf Ihre Person.</p>
+                            <p>II. Erhebung und Speicherung personenbezogener</p>
+                            <p>Daten Personenbezogene Daten wie Name, Username und zusätzliche Metadaten wie z. B. Anschrift, Telefonnummer und Email-Adresse (Bestandsdaten) werden erhoben, wenn und soweit dies im Rahmen der Begründung und Abwicklung eines Vertragsverhältnisses sowie für dessen inhaltliche Ausgestaltung oder Änderung erforderlich ist. Diese Daten werden in der Regel in elektronischen Anmeldeformularen erhoben. Mit vollständiger Abwicklung des Vertrages werden Ihre Daten für die weitere Verwendung gesperrt und nach Ablauf der steuer- und handelsrechtlichen Vorschriften gelöscht, sofern Sie nicht ausdrücklich in die weitere Nutzung Ihrer Daten eingewilligt haben.</p>
+                            <p>III. Übermittlung von Daten an Dritte</p>
+                            <p>Eine Weitergabe Ihrer personenbezogenen Daten an Dritte erfolgt grundsätzlich nur, sofern dies zur Erbringung unserer Dienstleistung oder zur Vertragsdurchführung notwendig ist und Sie ausdrücklich eingewilligt haben.</p>
+                            <p>IV. Verwendung von Cookies</p>
+                            <p>Die Website www.okfn.de nutzt Piwik (http://www.piwik.org), einen Open-Source-Webanalysedienst. Piwik verwendet sogenannte “Cookies”, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglicht. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website (einschließlich Ihrer IP-Adresse) bleiben dabei unter der Datenhoheit von www.okfn.de. Wir benutzen diese Informationen, um die Nutzung auszuwerten und um Reports über die Websiteaktivitäten zusammenzustellen. OKF DE wird diese Informationen nicht an Dritte übertragen. Sie können die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website voll umfänglich nutzen können. Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch www.okfn.de in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden.</p>
+                            <p>V. Newsletter</p>
+                            <p>Bei Anmeldung zum E-Mail-Newsletter wird Ihre E-Mailadresse mit Ihrer Einwilligung für eigene Zwecke genutzt, bis Sie sich vom Newsletter abmelden. Eine Abmeldung ist jederzeit über den dafür vorgesehenen Link im Newsletter oder eine entsprechende Mitteilung an uns möglich.</p>
+                            <p>VI. Abrufbarkeit der Datenschutzerklärung</p>
+                            <p>Sie können die Datenschutzerklärung jederzeit von jeder Seite dieses Internetangebots unter dem Link „Impressum“ abrufen. Bitte nehmen Sie zur Kenntnis, dass Änderungen des Angebots, gesetzliche und rechtliche Neuerungen sowie ggf. nachträglich erkannte Regelungslücken Änderungen dieser Datenschutzerklärung erforderlich werden lassen können.</p>
+                            <p>VII. Fragen und Auskunftsrecht</p>
+                            <p>Ihr Vertrauen ist uns wichtig. Daher möchten wir Ihnen jederzeit und kostenlos Rede und Antwort bezüglich der Verarbeitung Ihrer personenbezogenen Daten stehen. Auch haben Sie nach dem Bundesdatenschutzgesetz ein Recht auf unentgeltliche Auskunft über Ihre gespeicherten Daten sowie ggf. ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Sie können außerdem jederzeit die uns erteilte Einwilligung zur Datenerhebung und Verwendung ohne Angaben von Gründen widerrufen. Wenn Sie Fragen haben, die Ihnen diese Datenschutzerklärung nicht beantworten konnte oder wenn Sie zu einem Punkt vertiefte Informationen wünschen, wenden Sie sich bitte jederzeit an info [at] okfn [dot] de.</p>
+                            <p>VIII. Sicherheitshinweis</p>
+                            <p>Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Schliessen</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Leaflet -->
+<script src="/static/leaflet/leaflet-src.js" type="text/javascript"></script>
+
+<script src="/static/leaflet/leaflet.extras.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+    L.Control.ResetView.TITLE = "Ansicht zurücksetzen";
+    L.Control.ResetView.ICON = "url(/static/leaflet/images/reset-view.png)";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="/static/js/leaflet.markercluster.js"></script>
+<script type="text/javascript" charset="utf-8" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="/static/js/less-1.7.0.min.js"></script>
+
+
+
+<script type="text/javascript" charset="utf-8">
+  //var daycarecenterIcon = 'static/img/kita.svg';
+  var playgroundIcon = 'static/img/playground3.svg';
+  //var schoolIcon = 'static/img/school.svg';
+  var posIcon = 'static/img/marker-circle.svg';
+
+  //var daycarecenterDataUrl = '/api/daycare/';
+  var playgroundDataUrl = '/api/playgrounds_kidsle/';
+  //var schoolDataUrl = '/api/schools/';
+
+  //var schoolsActive = false;
+  //var daycareActive = false;
+  var playgroundsActive = true;
+  </script>
+
+  <script type="text/javascript" charset="utf-8" src="static/js/leaveme.js"></script>
+  <script type="text/javascript" charset="utf-8" src="static/js/offcanvas.js"></script>
+  <script>
+  (function($) {
+      $('#contact').on('click', function() {
+          $('#contactModal').modal('show');
+      });
+       $('#imprint').on('click', function() {
+          $('#imprintModal').modal('show');
+      });
+  })(jQuery);
+  </script>
+  <!--{% endblock %}-->
+</body>
+
+</html>

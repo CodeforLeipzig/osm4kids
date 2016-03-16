@@ -12,6 +12,14 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 // routes
+app.use(express.static('public'));
+
+app.use('/api/playgrounds_kidsle', function (req, res, next) {
+    var transformed = JSON.parse(fs.readFileSync('./resources/playgrounds_center_short.geojson'));
+    res.json(transformed);
+    //delete transformed;
+});
+
 app.use('/api/playgrounds', function (req, res, next) {
     var transformed = transformer(JSON.parse(fs.readFileSync('./resources/playgrounds_center_short.geojson')));
     res.json(transformed);
@@ -53,6 +61,7 @@ function transformer(data) {
     return retArr;              // The function returns the product of p1 and p2
 }
 
+
 // start server
-app.listen(8888);
-console.log('Magic happens on port ' + 8888);
+app.listen(8000);
+console.log('Magic happens on port ' + 8000);
