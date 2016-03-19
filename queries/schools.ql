@@ -1,0 +1,1 @@
+[out:json];(node(51.283136,12.291668,51.393439,12.486447)[amenity=school];way(51.283136,12.291668,51.393439,12.486447)[amenity=school];node(51.283136,12.291668,51.393439,12.486447)[amenity=music_school];way(51.283136,12.291668,51.393439,12.486447)[amenity=music_school];);out center;>;out skel qt;
