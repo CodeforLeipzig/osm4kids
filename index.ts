@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 // routes
-app.use(express.static('public'));
+//app.use(express.static('public')); 
 
 app.use('/api/playgrounds_kidsle', function (req, res, next) {
     var transformed = JSON.parse(fs.readFileSync('./resources/playgrounds_center_short.geojson'));
