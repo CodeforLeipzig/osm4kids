@@ -1,4 +1,4 @@
-# OSM4kids
+# OSM4kids ![build status](https://travis-ci.org/hcrudolph/osm4kids-backend.svg?branch=master)
 
 ## Introduction
 
