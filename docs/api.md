@@ -6,26 +6,33 @@ This Api returns geojson (http://geojson.org/geojson-spec.html#examples)
 ```json
 {
    "type":"FeatureCollection",
+   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
    "features":[
       {
          "uuid":"88a01638-a962-4b16-887a-8a23f09a102d",
          "type":"Feature",
+         "properties":{
+               "street":"Körnerplatz"
+         },
          "geometry":{
             "type":"Point",
             "coordinates":[
-               "12.3754144",
-               "51.3254938"
+               12.3754144,
+               51.3254938
             ]
          }
       },
       {
          "uuid":"7b7b201f-d0c1-447d-9991-e0f44c760a3f",
          "type":"Feature",
+         "properties":{
+                  "street":"Öserstraße"
+        },
          "geometry":{
             "type":"Point",
             "coordinates":[
-               "12.337419",
-               "51.319833"
+               12.337419,
+               51.319833
             ]
          }
       }
@@ -42,6 +49,7 @@ Response:
 ```json
       {
          "uuid":"88a01638-a962-4b16-887a-8a23f09a102d",
+         "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
          "type":"Feature",
          "properties":{
             "name":"Spielplatz Körnerplatz",
@@ -60,8 +68,8 @@ Response:
          "geometry":{
             "type":"Point",
             "coordinates":[
-               "12.3754144",
-               "51.3254938"
+               12.3754144,
+               51.3254938
             ]
          }
       }
@@ -76,6 +84,7 @@ Response:
 ```json
    {
             "uuid":"7b7b201f-d0c1-447d-9991-e0f44c760a3f",
+            "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
             "type":"Feature",
             "properties":{
                "name":"Spielplatz Öserstraße",
@@ -98,8 +107,8 @@ Response:
             "geometry":{
                "type":"Point",
                "coordinates":[
-                  "12.337419",
-                  "51.319833"
+                  12.337419,
+                  51.319833
                ]
             }
          }
