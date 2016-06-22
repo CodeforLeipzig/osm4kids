@@ -1,11 +1,14 @@
 # folder
 node_modules/
+resources/
 bin/
 obj/
 .idea/
 
 # files
-index.js
+launch.json
+tasks.json
 index.js.map
+*.js
 
 
