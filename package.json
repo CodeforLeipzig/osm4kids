@@ -1,9 +1,12 @@
 {
   "name": "osm4kids",
-  "version": "6.2.0",
+  "version": "0.0.0",
   "description": "osm4kids",
   "main": "index.js",
   "license": "GPL-3.0",
+  "engines": {
+    "node" : "6.2.0"
+  },
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
@@ -29,8 +32,10 @@
     }
   ],
   "scripts": {
+      "preinstall" : "./node_modules/.bin/tsc index.ts",
       "start": "node index.js",
       "test": "./node_modules/.bin/mocha --reporter spec",
-      "postinstall" : "typings install"
+      "postinstall" : "typings install",
+      "clean" : "rm *.js && rm *.js.map"
   }
 }
