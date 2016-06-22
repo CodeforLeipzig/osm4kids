@@ -4,11 +4,10 @@ resources/
 bin/
 obj/
 .idea/
+.vscode/
 
 # files
-launch.json
-tasks.json
-index.js.map
+*.js.map
 *.js
 
 

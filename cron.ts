@@ -1,7 +1,8 @@
+import { baseName, pathSep } from "./helpers";
+
 var fs = require('fs');
 var schedule = require('node-schedule');
 var overpass = require('query-overpass');
-
 export class OverpassJob {
     private job: any;
     constructor (schedule_string: string,
@@ -37,21 +38,4 @@ function writeTargetFile (query_file: string, target_file: string) {
             });
         });
     });
-}
-
-/* Utility functions */
-
-function pathSep() {
-    if (/^win/.test(process.platform)) {
-        return ('\\');
-    } else {
-        return ('/');
-    }
-}
-
-function baseName(str) {
-    var base = new String(str).substring(str.lastIndexOf(pathSep()) + 1);
-    if (base.lastIndexOf(".") != -1)
-        base = base.substring(0, base.lastIndexOf("."));
-    return base;
 }
