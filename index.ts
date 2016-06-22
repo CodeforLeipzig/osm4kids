@@ -2,10 +2,10 @@
 
 var express = require('express');
 var app = express();
-var body_parser = require('body-parser');
-var cron = require('./cron');
-var _ = require('lodash');
 var fs = require('fs');
+var body_parser = require('body-parser');
+import _ = require('lodash');
+import { OverpassJob } from './cron';
 var port_num = 8000;
 
 app.use(body_parser.urlencoded({extended: true}));
@@ -30,4 +30,4 @@ app.listen(port_num);
 console.log('Magic happens on port ' + port_num);
 
 /* Start Cronjob */
-let cronjob = new cron.OverpassJob('* * */6 * * *', 'queries', 'resources');
+let cronjob = new OverpassJob('* * */6 * * *', 'queries', 'resources');
