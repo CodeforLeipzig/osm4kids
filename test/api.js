@@ -1,29 +1,30 @@
-var assert = require('assert'),
+"use strict";
+var chai = require('chai');
 var http = require('http');
-
-describe('HTTP status code after GET api/playgrounds/', function () {
-  it('should be 200', function (done) {
-    http.get('http://localhost:8000/api/playgrounds', function (res) {
-      assert.equal(200, res.statusCode);
-      done();
+var app = require('../index');
+var expect = chai.expect;
+var base_url = 'http://localhost:8000';
+describe('/api/schools', function () {
+    it('should return 200', function (done) {
+        http.get(base_url + '/api/schools', function (res) {
+            expect(res.statusCode).to.equal(200);
+            done();
+        });
     });
-  });
 });
-
-describe('HTTP status code after GET api/schools/', function () {
-  it('should be 200', function (done) {
-    http.get('http://localhost:8000/api/schools', function (res) {
-      assert.equal(200, res.statusCode);
-      done();
+describe('/api/doctors', function () {
+    it('should return 200', function (done) {
+        http.get(base_url + '/api/schools', function (res) {
+            expect(res.statusCode).to.equal(200);
+            done();
+        });
     });
-  });
 });
-
-describe('HTTP status code after GET api/doctors/', function () {
-  it('should be 200', function (done) {
-    http.get('http://localhost:8000/api/doctors', function (res) {
-      assert.equal(200, res.statusCode);
-      done();
+describe('/api/playgrounds', function () {
+    it('should return 200', function (done) {
+        http.get(base_url + '/api/playgrounds', function (res) {
+            expect(res.statusCode).to.equal(200);
+            done();
+        });
     });
-  });
 });

@@ -11,5 +11,9 @@
         "node_modules",
         "typings/browser.d.ts",
         "typings/browser"
+    ],
+    "files": [
+        "index.ts",
+        "test/api.ts"
     ]
 }

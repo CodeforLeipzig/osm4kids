@@ -1,5 +1,7 @@
 ﻿/// <reference path="typings/main.d.ts" />
 
+exports = module.exports = {};
+
 import fs = require('fs');
 import express = require('express');
 import body_parser = require('body-parser');
@@ -38,8 +40,9 @@ app.use('/api/schools', function (req, res, next) {
 });
 
 /* Start Server */
-app.listen(port_num);
-console.log('Magic happens on port ' + port_num + ".");
+var server = app.listen(port_num, function () {
+    console.log('Magic happens on port ' + port_num + ".\n");
+});
 
 /* Start Cronjob */
 let cronjob = new OverpassJob('* * */6 * * *', query_dir, resource_dir);
