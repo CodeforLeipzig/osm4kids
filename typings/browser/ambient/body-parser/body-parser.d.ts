@@ -1,4 +1,4 @@
-// Compiled using typings@0.6.8
+// Compiled using typings@0.6.10
 // Source: https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/9a2c50ea846ee6ae36feaea0accc77ae7b08a748/body-parser/body-parser.d.ts
 // Type definitions for body-parser
 // Project: http://expressjs.com
