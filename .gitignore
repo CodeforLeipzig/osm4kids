@@ -8,6 +8,5 @@ obj/
 
 # files
 *.js
-!test/*.js
 *.js.map
 
