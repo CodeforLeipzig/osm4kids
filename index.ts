@@ -6,6 +6,7 @@ import fs = require('fs');
 import express = require('express');
 import body_parser = require('body-parser');
 import { OverpassJob } from './cron';
+import { TransformJob } from './transform';
 import { pathSep } from './helpers';
 
 let resource_dir : string = 'resources';
@@ -50,3 +51,8 @@ app.listen(app.get('port'), function() {
 
 /* Start Cronjob running once every hour */
 let cronjob = new OverpassJob('0 0 * * * *', query_dir, resource_dir);
+
+/* Start Transformation */
+
+let transform_overpass_resources = new TransformJob();
+transform_overpass_resources.transform('resources');
