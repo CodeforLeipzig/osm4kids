@@ -13,8 +13,8 @@ Node.js comes with a packetmanager called [npm](https://www.npmjs.com/).
 It is recommended to install the following two npm-packages globally, so the executables can be launched from any path.
 
 ```sh
-# npm install --global typescript
-# npm install --global typings
+# npm install -g typescript
+# npm install -g typings
 ```
 [Typescript](http://www.typescriptlang.org/) is a javascript compiler and
 [Typings](https://www.npmjs.com/package/typings) is needed to bring codecompletion / intellisense in your editor.
@@ -31,12 +31,17 @@ Now all packages where included in the package.json will be installed.
 
 Build:
 ```sh
-# tsc index.ts
+# npm build
+```
+
+Test:
+```sh
+# npm test
 ```
 
 Run:
 ```sh
-# node index.js
+# npm start
 ```
 
 Try it in your browser:
