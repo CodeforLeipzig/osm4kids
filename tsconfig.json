@@ -7,9 +7,11 @@
         "removeComments": true,
         "noLib": false
     },
+    "files": [
+        "index.ts",
+        "test/api.ts"
+    ],
     "exclude": [
-        "node_modules",
-        "typings/browser.d.ts",
-        "typings/browser"
+        "node_modules"
     ]
 }

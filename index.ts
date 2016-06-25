@@ -1,4 +1,6 @@
-﻿/// <reference path="typings/main.d.ts" />
+﻿/// <reference path="typings/index.d.ts" />
+
+exports = module.exports = {};
 
 import fs = require('fs');
 import express = require('express');
@@ -20,6 +22,7 @@ app.use(express.static('public'));
 app.use('/api/playgrounds', function (req, res, next) {
     let complete_path : string = resource_dir + pathSep() + 'playgrounds.geojson';
     fs.readFile(complete_path, 'utf8', function(err, data) {
+        if (err || data === 'undefined') data = '{}';
         res.json(JSON.parse(data));
     });
 });
@@ -27,6 +30,7 @@ app.use('/api/playgrounds', function (req, res, next) {
 app.use('/api/doctors', function (req, res, next) {
     let complete_path : string = resource_dir + pathSep() + 'doctors.geojson';
     fs.readFile(complete_path, 'utf8', function(err, data) {
+        if (err || data === 'undefined') data = '{}';
         res.json(JSON.parse(data));
     });
 });
@@ -34,6 +38,7 @@ app.use('/api/doctors', function (req, res, next) {
 app.use('/api/schools', function (req, res, next) {
     let complete_path : string = resource_dir + pathSep() + 'schools.geojson';
     fs.readFile(complete_path, 'utf8', function(err, data) {
+        if (err || data === 'undefined') data = '{}';
         res.json(JSON.parse(data));
     });
 });
@@ -43,5 +48,5 @@ app.listen(app.get('port'), function() {
   console.log('Magic happens on port', app.get('port'));
 });
 
-/* Start Cronjob */
-let cronjob = new OverpassJob('*/10 * * * * *', query_dir, resource_dir);
+/* Start Cronjob running once every hour */
+let cronjob = new OverpassJob('0 0 * * * *', query_dir, resource_dir);
