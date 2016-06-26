@@ -48,3 +48,20 @@ Try it in your browser:
 ```sh
 # http://localhost:8000/api/playgrounds/
 ```
+
+## CHANGELOG 
+
+### 0.0.4
+* new feature: Transform the overpass result to a simpler geojson-structure
+
+### 0.0.3
+* new feature: Simple test suite using Mocha and Chai
+
+### 0.0.2
+* new feature: Export utility functions to dedicated helper module
+
+### 0.0.1
+* new feature: Cronjob that frequently query overpass-api using the npm package 'query-overpass'
+
+### 0.0.0
+* Initial commit
