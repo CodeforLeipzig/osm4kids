@@ -62,6 +62,5 @@ app.listen(app.get('port'), function() {
 let cronjob = new OverpassJob('0 0 * * * *', query_dir, resource_dir);
 
 /* Start Transformation */
-
 let transform_overpass_resources = new TransformJob();
-transform_overpass_resources.transform('resources');
+transform_overpass_resources.transform(resource_dir);
