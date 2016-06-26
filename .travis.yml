@@ -1,3 +1,10 @@
 language: node_js
 node_js:
-  - "6"
+- '6'
+deploy:
+  provider: heroku
+  api_key:
+    secure: xqgmZYvPWaFMoO8qMH4WBXto2DFRD8BuCn1Yx83pEVxr6yCm3z3kd3NDetoLnozPu5D6kHKefk+rUJ+77CUv4pYcYyHX1gYZPyby8SToCiKcJZJLgaGW4JK0jnid9gSC+Ed6gKMEStzQoDpkmV2Qsg12AhQWPbSTVVlDCxNC57la0HGgaqb+fOCl4fAvAuHGzeWbhlRQlL8SAElUAcBIF+g1yYTVEPdfRmienESmdhic4mG2GF2X1loW4jFe0nyeXgLdJvafh0VDhuAka69oLwWQ81uBn57kmKyCGTY1Du85VizaxeWExNi+TjwJ/9jGIqRdZACqTk5DDB+3nbPiBCiymnjot33/ilNACETLvS0smxXI7o3ZCqq+wumij/y0Y+9zaoE9dwuUDGf6BvxhIYKgIRCWjbrvispuK7GPcnLwGelwNPKAtGTGURtIvWPchb1vgD7DZd/OKfXEx70ZaBSCOPj9g5zis0HMfawXOt5f1p3sIFEqvHJM/oMTilZRxFLCiUgLLOtAGgUaG6+YxG32PD9LGCG1E+Nh38WhB2oNjtb3nnY/pC7m/4i1Y2cyr1kRKA0F8WYKxR6E6k81iThqrJimRNpjIXjhxLp+yd+EkTtJpqHYZVGy4KhPNgkD51+VOiPshyDG2yNIin3Q/G9wCkysWXy19EDDMwN0JhM=
+  app: osm4kids-backend
+  on:
+    repo: hcrudolph/osm4kids-backend
