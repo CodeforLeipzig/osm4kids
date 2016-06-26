@@ -20,6 +20,15 @@ app.set('port', (process.env.PORT || local_port));
 
 /* Routes Definition */
 app.use(express.static('public'));
+
+app.get('/', function(req, res) {
+	let content = '<h1>API</h1>' +
+                  '<p> <a href="/api/schools">schools</a> </p>' +
+                  '<p> <a href="/api/doctors">doctors</a> </p>' +
+                  '<p> <a href="/api/playgrounds">playgrounds</a> </p>';
+    res.send(content);
+});
+
 app.use('/api/playgrounds', function (req, res, next) {
     let complete_path : string = resource_dir + pathSep() + 'playgrounds.geojson';
     fs.readFile(complete_path, 'utf8', function(err, data) {
