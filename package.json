@@ -1,6 +1,6 @@
 {
   "name": "osm4kids",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "osm4kids",
   "main": "index.js",
   "license": "GPL-3.0",
