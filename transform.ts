@@ -43,8 +43,8 @@ function startTransform(complete_transform_dir: string) {
 
                             retArr.push({
                                 id: element['id'],
-                                latitude: element['geometry']['coordinates'][0],
-                                longitude: element['geometry']['coordinates'][1],
+                                longitude: element['geometry']['coordinates'][0],
+                                latitude: element['geometry']['coordinates'][1],
                                 tags: element['properties']['tags']
                             });
                         }
