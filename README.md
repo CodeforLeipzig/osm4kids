@@ -31,7 +31,7 @@ Now all packages where included in the package.json will be installed.
 
 Build:
 ```sh
-# npm build
+# npm tsc
 ```
 
 Test:
