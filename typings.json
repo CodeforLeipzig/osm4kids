@@ -4,6 +4,7 @@
     "chai": "registry:dt/chai#3.4.0+20160601211834",
     "express": "registry:dt/express#4.0.0+20160317120654",
     "express-serve-static-core": "registry:dt/express-serve-static-core#0.0.0+20160617060422",
+    "geojson": "registry:dt/geojson#0.0.0+20160619034323",
     "lodash": "registry:dt/lodash#3.10.0+20160619033623",
     "mime": "registry:dt/mime#0.0.0+20160316155526",
     "mocha": "registry:dt/mocha#2.2.5+20160619032855",

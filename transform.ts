@@ -1,6 +1,7 @@
 import fs = require('fs');
 import { baseName, pathSep } from "./helpers";
 var _ = require('lodash');
+var geojson = require('GeoJSON');
 
 export class TransformJob {
 
@@ -47,6 +48,8 @@ function startTransform(complete_transform_dir: string) {
                                 latitude: element['geometry']['coordinates'][1],
                                 tags: element['properties']['tags']
                             });
+                            
+                    
                         }
 
                     });
@@ -55,16 +58,19 @@ function startTransform(complete_transform_dir: string) {
 
                     fs.unlink(target_fileName, (err) => {
                         if (err) {
-                            //throw err;
+                            // throw err;
                             console.log('not successfully deleted ' + target_fileName);
                         }
                         console.log('successfully deleted ' + target_fileName);
                     });
 
-
-                    fs.writeFile(target_fileName, JSON.stringify(retArr), (err) => {
+                    // convert datastructure to valid geojson
+                    let retArr_geoJson:any = geojson.parse(retArr, {Point: ['latitude', 'longitude']});
+                    
+                    // write file with indention
+                    fs.writeFile(target_fileName, JSON.stringify(retArr_geoJson, null, 2), (err) => {
                         if (err) {
-                            //throw err;
+                            // throw err;
                             console.log('not successfully created ' + target_fileName);
                         }
                         console.log('successfully created ' + target_fileName);
