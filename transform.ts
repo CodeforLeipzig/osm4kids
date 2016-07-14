@@ -1,7 +1,7 @@
 import fs = require('fs');
 import { baseName, pathSep } from "./helpers";
 var _ = require('lodash');
-var geojson = require('GeoJSON');
+var geojson = require('geojson');
 
 export class TransformJob {
 
