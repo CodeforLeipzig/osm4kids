@@ -5,7 +5,7 @@ var exec = require('child_process').exec;
 var exec_this = "";
 
 if (os.platform() == ('win32' || 'win64')) {
-    exec_this = "node_modules\\.bin\\typings install && node_modules\\.bin\\tsc";
+    exec_this = "node_modules\\.bin\\typings install && node_modules\\.bin\\tsc.cmd";
 }
 else {
     exec_this = "./node_modules/.bin/typings install && ./node_modules/.bin/tsc";
@@ -13,9 +13,11 @@ else {
 
 exec(exec_this, (error, stdout, stderr) => {
     if (error) {
-        console.error(`exec error: ${error}`);
+        console.error(`[err] error: ${error}`);
+        console.log(`[err] stdout: ${stdout}`);
+        console.log(`[err] stderr: ${stderr}`);
         return;
     }
-    console.log(`stdout: ${stdout}`);
-    console.log(`stderr: ${stderr}`);
+    console.log(`[ok] stdout: ${stdout}`);
+    console.log(`[ok] sstderr: ${stderr}`);
 });
