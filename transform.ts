@@ -32,51 +32,55 @@ function startTransform(complete_transform_dir: string) {
                 fs.readFile(file_to_transform, 'utf8', function (err, file_content) {
                     if (err) throw err;
 
-                    var geojson_Obj = _(JSON.parse(file_content)['features']);
+                    if (file_content == ("" || "undefined")) {
+                        console.log("file " + query_files[i] + " is empty!");
+                    }
+                    else {
+                        var geojson_Obj = _(JSON.parse(file_content)['features']);
 
-                    geojson_Obj.forEach(function (element) {
-                        // Description: if element = 'node' || (center && (relation || way))
-                        if (element["type"] == "Feature" &&
-                            (element["properties"]["type"] == 'node') ||
-                            (element["properties"]["geometry"] == 'center' &&
-                                (element["properties"]["type"] == 'relation' ||
-                                    element["properties"]["type"] == 'way'))) {
+                        geojson_Obj.forEach(function (element) {
+                            // Description: if element = 'node' || (center && (relation || way))
+                            if (element["type"] == "Feature" &&
+                                (element["properties"]["type"] == 'node') ||
+                                (element["properties"]["geometry"] == 'center' &&
+                                    (element["properties"]["type"] == 'relation' ||
+                                        element["properties"]["type"] == 'way'))) {
 
-                            retArr.push({
-                                id: element['id'],
-                                longitude: element['geometry']['coordinates'][0],
-                                latitude: element['geometry']['coordinates'][1],
-                                tags: element['properties']['tags']
-                            });
-                            
-                    
-                        }
+                                retArr.push({
+                                    id: element['id'],
+                                    longitude: element['geometry']['coordinates'][0],
+                                    latitude: element['geometry']['coordinates'][1],
+                                    tags: element['properties']['tags']
+                                });
 
-                    });
 
-                    let target_fileName: string = file_to_transform.replace('.geojson', '_clean.geojson');
+                            }
 
-                    fs.unlink(target_fileName, (err) => {
-                        if (err) {
-                            // throw err;
-                            console.log('not successfully deleted ' + target_fileName);
-                        }
-                        console.log('successfully deleted ' + target_fileName);
-                    });
+                        });
 
-                    // convert datastructure to valid geojson
-                    let retArr_geoJson:any = geojson.parse(retArr, {Point: ['latitude', 'longitude']});
-                    
-                    // write file with indention
-                    fs.writeFile(target_fileName, JSON.stringify(retArr_geoJson, null, 2), (err) => {
-                        if (err) {
-                            // throw err;
-                            console.log('not successfully created ' + target_fileName);
-                        }
-                        console.log('successfully created ' + target_fileName);
+                        let target_fileName: string = file_to_transform.replace('.geojson', '_clean.geojson');
 
-                    });
+                        fs.unlink(target_fileName, (err) => {
+                            if (err) {
+                                // throw err;
+                                console.log('not successfully deleted ' + target_fileName);
+                            }
+                            console.log('successfully deleted ' + target_fileName);
+                        });
 
+                        // convert datastructure to valid geojson
+                        let retArr_geoJson: any = geojson.parse(retArr, { Point: ['latitude', 'longitude'] });
+
+                        // write file with indention
+                        fs.writeFile(target_fileName, JSON.stringify(retArr_geoJson, null, 2), (err) => {
+                            if (err) {
+                                // throw err;
+                                console.log('not successfully created ' + target_fileName);
+                            }
+                            console.log('successfully created ' + target_fileName);
+
+                        });
+                    }
                 });
 
             }
