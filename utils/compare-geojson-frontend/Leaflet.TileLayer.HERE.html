@@ -1,0 +1,163 @@
+<!-- 
+* Source: https://ivansanchez.gitlab.io/Leaflet.TileLayer.HERE/demo.html and https://gitlab.com/IvanSanchez/Leaflet.TileLayer.HERE
+* This page is an internal tool to compare kidsle-data with overpass-files
+* insert appid and appcode to get unlimited tiles from nokia here
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://leafletjs-cdn.s3.amazonaws.com/content/leaflet/master/leaflet.css" rel="stylesheet" type="text/css" />
+	<script src="https://leafletjs-cdn.s3.amazonaws.com/content/leaflet/master/leaflet.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+		crossorigin="anonymous"></script>
+	<script src="https://ivansanchez.gitlab.io/Leaflet.TileLayer.HERE/leaflet-tilelayer-here.js"></script>
+
+	<meta charset="utf-8">
+	<title>Leaflet.TileLayer.HERE demo</title>
+	<style>
+		body {
+			margin: 0;
+		}
+		
+		#map {
+			width: 100vw;
+			height: 100vh;
+		}
+	</style>
+</head>
+
+<body>
+	<div id='map'></div>
+
+	<script>
+
+  
+  		var json_kidsle_corrected = "";
+		$.getJSON('http://127.0.0.1:8000/api/playgrounds_kidsle_geojson/', function(data) {
+			json_kidsle_corrected = data;
+		});
+
+		var json_playgrounds_clean = "";
+		$.getJSON('http://127.0.0.1:8000/api/playgrounds_clean/', function(data) {
+			json_playgrounds_clean = data;
+		});
+
+
+		// Workarround: after one second, the response "json_kidsle_corrected" and "json_playgrounds_clean" is complete
+		alert("please wait one second, and click OK");
+  
+    var myCenter = new L.LatLng(51.3254938,12.3754144);
+    var map = new L.Map('map', {center: myCenter, zoom: 12});
+
+	var schemes = [
+		'normal.day',
+		'normal.day.grey',
+		'normal.day.transit',
+		'normal.night.transit',
+// 		'normal.traffic.day',
+// 		'normal.traffic.night',
+		'normal.day.custom',
+		'normal.night',
+		'normal.night.grey',
+		'pedestrian.day',
+		'pedestrian.day.mobile',
+		'pedestrian.night',
+		'pedestrian.night.mobile',
+		'carnav.day.grey',
+		'normal.day.mobile',
+		'normal.day.grey.mobile',
+		'normal.day.transit.mobile',
+		'normal.night.transit.mobile',
+		'normal.night.mobile',
+		'normal.night.grey.mobile',
+		'reduced.day',
+		'reduced.night',
+		'terrain.day',
+		'satellite.day',
+		'hybrid.day',
+		'hybrid.day.transit',
+		'hybrid.grey.day',
+// 		'hybrid.traffic.day',
+		'terrain.day.mobile',
+		'hybrid.day.mobile'
+	]
+
+	var baselayers = {};
+
+	for (var i in schemes) {
+		var scheme = schemes[i];
+		baselayers[scheme] = L.tileLayer.here({
+			appId: '------------------------------------',
+			appCode: '------------------------------------',
+			scheme: scheme
+		});
+	}
+
+
+// 	baselayers['normal.day'].addTo(map);
+
+	L.control.layers(baselayers, {}, {collapsed: false}).addTo(map)
+
+	function onEachFeature(feature, layer) {
+			var popupContent = "<p>playgrounds</p>" +
+					"<p>id: "+feature.id + "</p>"+
+					"<p>lat: "+feature.geometry.coordinates[0] + "</p>"+
+					"<p>lon: "+feature.geometry.coordinates[1] + "</p>"+
+					"<p>properties: "+JSON.stringify(feature.properties) + "</p>";
+					//feature.geometry.type
+
+			if (feature.properties && feature.properties.popupContent) {
+				popupContent += feature.properties.popupContent;
+			}
+
+			layer.bindPopup(popupContent);
+		}
+
+		L.geoJson([json_kidsle_corrected], {
+
+			style: function (feature) {
+				return feature.properties && feature.properties.style;
+			},
+
+			onEachFeature: onEachFeature,
+
+			pointToLayer: function (feature, latlng) {
+				return L.circleMarker(latlng, {
+					radius: 8,
+					fillColor: "#ff7800",
+					color: "#000",
+					weight: 1,
+					opacity: 1,
+					fillOpacity: 0.8
+				});
+			}
+		}).addTo(map);
+
+		L.geoJson([json_playgrounds_clean], {
+
+			style: function (feature) {
+				return feature.properties && feature.properties.style;
+			},
+
+			onEachFeature: onEachFeature,
+
+			pointToLayer: function (feature, latlng) {
+				return L.circleMarker(latlng, {
+					radius: 8,
+					fillColor: "#007800",
+					color: "#000",
+					weight: 1,
+					opacity: 1,
+					fillOpacity: 0.8
+				});
+			}
+		}).addTo(map);
+
+
+
+  </script>
+</body>
+
+</html>
