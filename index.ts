@@ -29,6 +29,15 @@ app.get('/', function(req, res) {
     res.send(content);
 });
 
+// CORS header securiy
+app.all('/*', function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+});
+
+/* playgrounds */
 app.use('/api/playgrounds', function (req, res, next) {
     let complete_path : string = resource_dir + pathSep() + 'playgrounds.geojson';
     fs.readFile(complete_path, 'utf8', function(err, data) {
@@ -37,6 +46,23 @@ app.use('/api/playgrounds', function (req, res, next) {
     });
 });
 
+app.use('/api/playgrounds_clean', function (req, res, next) {
+    let complete_path : string = resource_dir + pathSep() + 'playgrounds_clean.geojson';
+    fs.readFile(complete_path, 'utf8', function(err, data) {
+        if (err || data === 'undefined') data = '{}';
+        res.json(JSON.parse(data));
+    });
+});
+
+app.use('/api/playgrounds_kidsle_geojson', function (req, res, next) {
+    let complete_path : string = resource_dir + pathSep() + 'kidsle'+ pathSep() + 'playgrounds_kidsle_spreadsheet.geojson';
+    fs.readFile(complete_path, 'utf8', function(err, data) {
+        if (err || data === 'undefined') data = '{}';
+        res.json(JSON.parse(data));
+    });
+});
+
+/* doctors */
 app.use('/api/doctors', function (req, res, next) {
     let complete_path : string = resource_dir + pathSep() + 'doctors.geojson';
     fs.readFile(complete_path, 'utf8', function(err, data) {
@@ -45,6 +71,7 @@ app.use('/api/doctors', function (req, res, next) {
     });
 });
 
+/* schools */
 app.use('/api/schools', function (req, res, next) {
     let complete_path : string = resource_dir + pathSep() + 'schools.geojson';
     fs.readFile(complete_path, 'utf8', function(err, data) {
