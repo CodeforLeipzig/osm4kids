@@ -5,6 +5,7 @@ bin/
 obj/
 .idea/
 .vscode/
+typings/
 
 # files
 *.js
