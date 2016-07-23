@@ -90,4 +90,5 @@ let cronjob = new OverpassJob('0 0 * * * *', query_dir, resource_dir);
 
 /* Start Transformation */
 let transform_overpass_resources = new TransformJob();
-transform_overpass_resources.transform_overpass_to_clean(resource_dir);
+//transform_overpass_resources.transform_overpass_to_clean(resource_dir);
+transform_overpass_resources.merge_overpass_with_kidsle_kb(resource_dir, query_dir);
