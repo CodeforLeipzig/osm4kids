@@ -39,7 +39,7 @@ app.all('/*', function (req, res, next) {
 
 /* playgrounds */
 app.use('/api/playgrounds', function (req, res, next) {
-    let complete_path : string = resource_dir + pathSep() + 'playgrounds.geojson';
+    let complete_path : string = resource_dir + pathSep() + 'playgrounds_OP.geojson';
     fs.readFile(complete_path, 'utf8', function(err, data) {
         if (err || data === 'undefined') data = '{}';
         res.json(JSON.parse(data));
@@ -64,7 +64,7 @@ app.use('/api/playgrounds_kidsle_geojson', function (req, res, next) {
 
 /* doctors */
 app.use('/api/doctors', function (req, res, next) {
-    let complete_path : string = resource_dir + pathSep() + 'doctors.geojson';
+    let complete_path : string = resource_dir + pathSep() + 'doctors_OP.geojson';
     fs.readFile(complete_path, 'utf8', function(err, data) {
         if (err || data === 'undefined') data = '{}';
         res.json(JSON.parse(data));
@@ -73,7 +73,7 @@ app.use('/api/doctors', function (req, res, next) {
 
 /* schools */
 app.use('/api/schools', function (req, res, next) {
-    let complete_path : string = resource_dir + pathSep() + 'schools.geojson';
+    let complete_path : string = resource_dir + pathSep() + 'schools_OP.geojson';
     fs.readFile(complete_path, 'utf8', function(err, data) {
         if (err || data === 'undefined') data = '{}';
         res.json(JSON.parse(data));
