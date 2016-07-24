@@ -12,6 +12,5 @@ export const QUERIES: string = 'queries';
 export const BASE_DIR: string = process.cwd();
 
 /* selections */
-
 export const IMPORTANT_TAGS_OP  = ['resources'];
-export const IMPORTANT_TAGS_KIDSLE= ['resources'];
+export const IMPORTANT_TAGS_KIDSLE= ['equipment', 'gaming_devices', 'title'];
