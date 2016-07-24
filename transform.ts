@@ -1,25 +1,28 @@
 import fs = require('fs');
 import { baseName, pathSep } from "./helpers";
+import * as cons from "./constants";
+
 var _ = require('lodash');
 var geojson = require('geojson');
 
 export class TransformJob {
 
     constructor() {
+
     }
 
-    transform_overpass_to_clean(transform_dir: string) {
-        var base_dir = process.cwd();
-        var complete_transform_dir = base_dir + pathSep() + transform_dir;
+    transform_overpass_to_clean() {
+        //var base_dir = process.cwd();
+        //var complete_transform_dir = base_dir + pathSep() + transform_dir;
 
-        transform_to_clean(complete_transform_dir);
+        transform_to_clean(cons.BASE_DIR + pathSep() + cons.RESOURCES);
     }
-    merge_overpass_with_kidsle_kb(transform_dir: string, query_dir: string) {
-        var base_dir = process.cwd();
-        var complete_query_dir = base_dir + pathSep() + query_dir;
-        var complete_transform_dir = base_dir + pathSep() + transform_dir + pathSep();
+    merge_overpass_with_kidsle_kb() {
+        //var base_dir = process.cwd();
+        //var complete_query_dir = base_dir + pathSep() + query_dir;
+        //var complete_transform_dir = base_dir + pathSep() + transform_dir + pathSep();
 
-        merge_overpass_with_kidsle_kb(complete_transform_dir);
+        merge_overpass_with_kidsle_kb(cons.BASE_DIR + pathSep() + cons.RESOURCES);
     }
 }
 
@@ -101,11 +104,13 @@ function merge_overpass_with_kidsle_kb(complete_transform_dir: string) {
         if (err) throw err;
         for (var i in query_files) {
 
-            /* do not retransform transformed files */
-            if (_.endsWith(query_files[i], '_kidsle_kb.geojson')) {
+            if (_.endsWith(query_files[i], cons.ENDING_KIDSLE_KB)) {
 
-                var full_path_kidsle_kb_file = complete_transform_dir + query_files[i];
-                var full_path_overpass_file = complete_transform_dir + _.replace(query_files[i], '_kidsle_kb.geojson', '_clean.geojson');
+                /* product means information-type like playgrounds, schools, doctors or daycare */
+                var product = _.replace(query_files[i], cons.ENDING_KIDSLE_KB, '');
+
+                var full_path_kidsle_kb_file = complete_transform_dir + pathSep() + query_files[i];
+                var full_path_overpass_file = complete_transform_dir + pathSep() + _.replace(query_files[i], cons.ENDING_KIDSLE_KB, cons.ENDING_OP_CLEAN);
 
                 console.log("full_path_kidsle_kb_file: " + full_path_kidsle_kb_file);
                 console.log("full_path_overpass_file:  " + full_path_overpass_file);
@@ -123,7 +128,6 @@ function merge_overpass_with_kidsle_kb(complete_transform_dir: string) {
                 _(xxx_content_overpass_file).forEach(function (value_op) {
                     var lon: string = value_op['geometry']['coordinates'][0];
                     var lat: string = value_op['geometry']['coordinates'][1];
-                    console.log("----");
 
                     var kidsle_additonal_information = new Array();
                     _(xxx_content_kidsle_kb_file).forEach(function (value_k) {
@@ -144,7 +148,8 @@ function merge_overpass_with_kidsle_kb(complete_transform_dir: string) {
                 });
 
                 let retArr_geoJson2: any = geojson.parse(retArr2, { Point: ['latitude', 'longitude'] });
-                let target_fileName: string = complete_transform_dir + "playgrounds_TEST.geojson";
+                let target_fileName: string = complete_transform_dir + pathSep() + product + cons.ENDING_OP_CLEAN_MERGE_KIDSLE;
+
                 fs.writeFile(target_fileName, JSON.stringify(retArr_geoJson2, null, 2), (err) => {
                     if (err) {
                         // throw err;

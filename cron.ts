@@ -1,4 +1,5 @@
 import { baseName, pathSep } from "./helpers";
+import * as cons from "./constants";
 
 var fs = require('fs');
 var schedule = require('node-schedule');
@@ -22,7 +23,7 @@ function startJob (query_dir: string, target_dir: string) {
         if (err) throw err;
         for (var i in query_files) {
             var query_file = query_dir + pathSep() + query_files[i];
-            var target_file = target_dir + pathSep() + baseName(query_files[i]) + '.geojson';
+            var target_file = target_dir + pathSep() + baseName(query_files[i]) + cons.ENDING_OP;
             writeTargetFile(query_file, target_file);
         }
     });
