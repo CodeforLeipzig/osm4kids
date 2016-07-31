@@ -12,21 +12,49 @@ export class TransformJob {
     }
 
     transform_overpass_to_clean() {
-        transform_to_clean(cons.BASE_DIR + pathSep() + cons.RESOURCES);
+        function start() {
+            console.log("start");
+            // your code here
+            if (countFilesWithEnding(cons.ENDING_OP) == 4) {
+                console.log(cons.ENDING_OP + " :) ");
+                transform_to_clean(cons.BASE_DIR + pathSep() + cons.RESOURCES);
+                //setTimeout(start, 3000);
+            }
+            else {
+                console.log(cons.ENDING_OP + " :( -> warte 5 Sekunden ");
+                setTimeout(start, 5000);
+            }
+
+        }
+        start();
     }
+
     merge_overpass_with_kidsle_kb() {
-        merge_overpass_with_kidsle_kb(cons.BASE_DIR + pathSep() + cons.RESOURCES);
+        function start2() {
+            console.log("start");
+            // your code here
+            if (countFilesWithEnding(cons.ENDING_OP_CLEAN) == 4) {
+                console.log(cons.ENDING_OP_CLEAN + " :) ");
+                merge_overpass_with_kidsle_kb(cons.BASE_DIR + pathSep() + cons.RESOURCES);
+                //setTimeout(start, 3000);
+            }
+            else {
+                console.log(cons.ENDING_OP_CLEAN + " :( -> warte 5 Sekunden ");
+                setTimeout(start2, 5000);
+            }
+
+        }
+        start2();
     }
 }
 
 function transform_to_clean(complete_transform_dir: string) {
-
     fs.readdir(complete_transform_dir, function (err, query_files) {
         if (err) throw err;
         for (var i in query_files) {
 
             /* do not retransform transformed files */
-            if (_.endsWith(query_files[i], '.geojson') && !_.endsWith(query_files[i], '_clean.geojson')) {
+            if (_.endsWith(query_files[i], '_OP.geojson')) {
 
                 let file_to_transform: string = complete_transform_dir + pathSep() + query_files[i];
 
@@ -160,4 +188,15 @@ function merge_overpass_with_kidsle_kb(complete_transform_dir: string) {
             }
         }
     });
+}
+
+function countFilesWithEnding(ending: string) {
+    var files = fs.readdirSync(cons.BASE_DIR + pathSep() + cons.RESOURCES);
+    var count: number = 0;
+    files.forEach(function (row, index) {
+        if (row.indexOf(ending) > -1) {
+            count += 1;
+        }
+    });
+    return count;
 }

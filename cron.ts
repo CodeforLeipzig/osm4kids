@@ -12,9 +12,11 @@ export class OverpassJob {
         var base_dir = process.cwd();
         var complete_query_dir = base_dir + pathSep() + rel_query_dir;
         var complete_target_dir = base_dir + pathSep() + rel_target_dir;
-        this.job = schedule.scheduleJob(schedule_string, function () {
-            startJob(complete_query_dir, complete_target_dir)
-        });
+        
+        /* removed the scheduling for testing, now on start OP will queried */
+        //this.job = schedule.scheduleJob(schedule_string, function () {
+        startJob(complete_query_dir, complete_target_dir)
+        //});
     }
 }
 
