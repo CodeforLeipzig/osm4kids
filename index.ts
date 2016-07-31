@@ -8,7 +8,7 @@ import body_parser = require('body-parser');
 import { OverpassJob } from './cron';
 import { TransformJob } from './transform';
 import { pathSep } from './helpers';
-var seq = require('sequence');
+//var seq = require('sequence');
 
 let resource_dir: string = 'resources';
 let query_dir: string = 'queries';
