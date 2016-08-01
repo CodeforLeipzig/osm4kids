@@ -65,3 +65,10 @@ Try it in your browser:
 
 ### 0.0.0
 * Initial commit
+
+## TODOs
+* outsource `fs.unlink` and `fs.writefile` to helpers.ts
+* filter tags in `_OP_clean_merge_kidsle.geojson` with settings in constants.ts selections-section
+* syncron sequence: `[1]download OP -> [2]create clean_OP -> [3]merge OP with kidsle`. no async-behaviour that finished step [3] before step [1]
+* the bounding-box of kidsle is bigger than the overpass-queries -> correct the queries
+* if no `/resources/*_OP.geojson` exist, force download
