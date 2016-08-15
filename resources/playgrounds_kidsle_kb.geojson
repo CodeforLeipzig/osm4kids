@@ -175,8 +175,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.401118,
-					51.296411
+					12.4011424,
+					51.2963937
 				]
 			},
 			"properties": {
@@ -188,7 +188,8 @@
 				"equipment": "['Spielwiese','Bänke','Findlinge','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Siegfriedstraße / im Park",
 				"Wird geprüft durch": "René",
-				"Geprüft": "René"
+				"Geprüft": "René",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -217,8 +218,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.40466,
-					51.297692
+					12.4045827,
+					51.2977563
 				]
 			},
 			"properties": {
@@ -230,7 +231,8 @@
 				"equipment": "['Sandspielfläche','Spielwiese','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Siegfriedstraße / im Park",
 				"Wird geprüft durch": "René",
-				"Geprüft": "René"
+				"Geprüft": "René",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -238,8 +240,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.405846,
-					51.298127
+					12.4056858,
+					51.2981955
 				]
 			},
 			"properties": {
@@ -251,7 +253,8 @@
 				"equipment": "['Rollstuhlzugang','Spielwiese','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "nördlich der Siegfriedstraße / im Park",
 				"Wird geprüft durch": "René",
-				"Geprüft": "René"
+				"Geprüft": "René",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -259,8 +262,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.40599,
-					51.298487
+					12.4059889,
+					51.2984786
 				]
 			},
 			"properties": {
@@ -272,7 +275,8 @@
 				"equipment": "['Spielwiese','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "nördlich der Siegfriedstraße / im Park",
 				"Wird geprüft durch": "René",
-				"Geprüft": "René"
+				"Geprüft": "René",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -343,8 +347,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.455971,
-					51.312981
+					12.4559494,
+					51.3129742
 				]
 			},
 			"properties": {
@@ -356,7 +360,8 @@
 				"equipment": "['Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Walter-Markov-Ring / Höhe Maienweg",
 				"Wird geprüft durch": "René",
-				"Geprüft": "René"
+				"Geprüft": "René",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -680,8 +685,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.483689,
-					51.339442
+					12.4836185,
+					51.3393908
 				]
 			},
 			"properties": {
@@ -693,7 +698,8 @@
 				"equipment": "['Sandspielfläche','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Verdistraße",
 				"Wird geprüft durch": "René",
-				"Geprüft": "René"
+				"Geprüft": "René",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -974,8 +980,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.4098156,
-					51.3434288
+					12.4102858,
+					51.3433468
 				]
 			},
 			"properties": {
@@ -987,7 +993,8 @@
 				"equipment": "['Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Zolikoferstraße / Lukasstraße",
 				"Wird geprüft durch": "René",
-				"Geprüft": "?"
+				"Geprüft": "?",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -1206,8 +1213,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.331449,
-					51.380694
+					12.3314013,
+					51.3806473
 				]
 			},
 			"properties": {
@@ -1219,7 +1226,8 @@
 				"equipment": "['Schattenplätze','Spielwiese','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Zeisigweg",
 				"Wird geprüft durch": "René",
-				"Geprüft": "René"
+				"Geprüft": "René",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -1689,8 +1697,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.463816,
-					51.28617
+					12.4638604,
+					51.2860918
 				]
 			},
 			"properties": {
@@ -1702,7 +1710,8 @@
 				"equipment": "['Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Am Gänseanger / Alte Tauchaer Straße",
 				"Wird geprüft durch": "Pascal",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -1731,8 +1740,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.421431,
-					51.290698
+					12.4214397,
+					51.2906842
 				]
 			},
 			"properties": {
@@ -1744,7 +1753,8 @@
 				"equipment": "['Schattenplätze','Spielwiese','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "im Park / Höhe Paul-Flechsig-Straße",
 				"Wird geprüft durch": "Max",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -1794,8 +1804,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.383019,
-					51.304396
+					12.3828429,
+					51.304239
 				]
 			},
 			"properties": {
@@ -1807,7 +1817,8 @@
 				"equipment": "['Spielwiese','Findlinge','Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Hildbrandstraße / Bornaische Straße",
 				"Wird geprüft durch": "Max",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -1815,8 +1826,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.386276,
-					51.29841
+					12.3863116,
+					51.298376
 				]
 			},
 			"properties": {
@@ -1828,7 +1839,8 @@
 				"equipment": "['Spielwiese','Schattenplätze','Bänke','Sandspielfläche','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Rembrandtstraße",
 				"Wird geprüft durch": "Max",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -1836,8 +1848,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.443922,
-					51.296427
+					12.4438941,
+					51.2963398
 				]
 			},
 			"properties": {
@@ -1849,7 +1861,8 @@
 				"equipment": "['Spielwiese','Bänke','Sandspielfläche','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Parkstraße",
 				"Wird geprüft durch": "Max",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -2662,8 +2675,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.47747,
-					51.323139
+					12.4773923,
+					51.3229552
 				]
 			},
 			"properties": {
@@ -2675,7 +2688,8 @@
 				"equipment": "['Spielwiese','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Kurt-Hänselmann-Weg",
 				"Wird geprüft durch": "Max",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -2914,8 +2928,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.4843066,
-					51.3227301
+					12.4841914,
+					51.3231868
 				]
 			},
 			"properties": {
@@ -2927,7 +2941,8 @@
 				"equipment": "['Schattenplätze','Sandspielfläche','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Baalsdorfer Anger",
 				"Wird geprüft durch": "Andy",
-				"Geprüft": "nicht gefunden"
+				"Geprüft": "nicht gefunden",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -3822,8 +3837,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.327611,
-					51.332496
+					12.3276187,
+					51.3325057
 				]
 			},
 			"properties": {
@@ -3835,7 +3850,8 @@
 				"equipment": "['überdachter Sitzbereich','Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Helmholtzstraße",
 				"Wird geprüft durch": "Robert",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -3906,8 +3922,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.326187,
-					51.332897
+					12.3261214,
+					51.3327417
 				]
 			},
 			"properties": {
@@ -3919,7 +3935,8 @@
 				"equipment": "['Spielwiese','Bänke','überdachter Sitzbereich','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Henriettenstraße / Endersstraße",
 				"Wird geprüft durch": "Robert",
-				"Geprüft": "fixed (unsicher)"
+				"Geprüft": "fixed (unsicher)",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -3949,8 +3966,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.477788,
-					51.33393
+					12.4777828,
+					51.3339025
 				]
 			},
 			"properties": {
@@ -3962,7 +3979,8 @@
 				"equipment": "['Spielwiese','Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Baumeister-Günther-Straße",
 				"Wird geprüft durch": "Robert",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -4223,8 +4241,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.323669,
-					51.337802
+					12.3235821,
+					51.3378898
 				]
 			},
 			"properties": {
@@ -4236,7 +4254,8 @@
 				"equipment": "['Naturpfad','Spielwiese','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Queckstraße",
 				"Wird geprüft durch": "Robert",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -4372,8 +4391,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.3367,
-					51.33857
+					12.3366919,
+					51.3385688
 				]
 			},
 			"properties": {
@@ -4385,7 +4404,8 @@
 				"equipment": "['Spielwiese','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Henricistraße",
 				"Wird geprüft durch": "Pascal",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -4772,8 +4792,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.322676,
-					51.340331
+					12.3226691,
+					51.3403191
 				]
 			},
 			"properties": {
@@ -4785,7 +4805,8 @@
 				"equipment": "['Sandspielfläche','Schattenplätze','Bänke','Betonliege','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Wielandstraße",
 				"Wird geprüft durch": "Robert",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -5066,8 +5087,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.4090467,
-					51.3444654
+					12.4099156,
+					51.3441578
 				]
 			},
 			"properties": {
@@ -5079,7 +5100,8 @@
 				"equipment": "['Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Mariannenstraße / Elisabethstraße",
 				"Wird geprüft durch": "",
-				"Geprüft": ""
+				"Geprüft": "",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -5424,8 +5446,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.308484,
-					51.352798
+					12.3084711,
+					51.3527167
 				]
 			},
 			"properties": {
@@ -5437,7 +5459,8 @@
 				"equipment": "['Sandspielfläche','Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Heimteichstraße / Gaußstraße",
 				"Wird geprüft durch": "Pascal",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -5487,8 +5510,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.292608,
-					51.355579
+					12.2925485,
+					51.3556248
 				]
 			},
 			"properties": {
@@ -5500,7 +5523,8 @@
 				"equipment": "['Bänke','Schattenplätze','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Heinrich-Heine-Straße / Südstraße",
 				"Wird geprüft durch": "Pascal",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -5571,8 +5595,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.457214,
-					51.358249
+					12.4571488,
+					51.3581858
 				]
 			},
 			"properties": {
@@ -5584,7 +5608,8 @@
 				"equipment": "['Spielwiese','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Höhe Hainbuchenstraße",
 				"Wird geprüft durch": "Andy",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -5991,8 +6016,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.299003,
-					51.378294
+					12.2988983,
+					51.3781964
 				]
 			},
 			"properties": {
@@ -6004,7 +6029,8 @@
 				"equipment": "['Spielwiese','Bänke','Sandspielfläche','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Stahmelner Straße",
 				"Wird geprüft durch": "Robert",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -6138,8 +6164,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.458336,
-					51.381211
+					12.4583405,
+					51.3811602
 				]
 			},
 			"properties": {
@@ -6151,7 +6177,8 @@
 				"equipment": "['Spielwiese','Bänke','separater Sitzbereich','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Am Künstlerbogen",
 				"Wird geprüft durch": "Andy",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -6243,8 +6270,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.374573,
-					51.388628
+					12.3745414,
+					51.3887009
 				]
 			},
 			"properties": {
@@ -6256,7 +6283,8 @@
 				"equipment": "['Sandspielfläche','Spielwiese','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Akazienweg",
 				"Wird geprüft durch": "Andy",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
