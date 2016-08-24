@@ -1,4 +1,4 @@
 [out:json];
-node(51.283136,12.291668,51.393439,12.486447)[leisure=playground];out center;>;out skel qt;
-way(51.283136,12.291668,51.393439,12.486447)[leisure=playground];out center;>;out skel qt;
-relation(51.283136,12.291668,51.393439,12.486447)[leisure=playground];out center;>;out skel qt;
+node(51.245545,12.205489,51.425508,12.545030)[leisure=playground];out center;>;out skel qt;
+way(51.245545,12.205489,51.425508,12.545030)[leisure=playground];out center;>;out skel qt;
+relation(51.245545,12.205489,51.425508,12.545030)[leisure=playground];out center;>;out skel qt;

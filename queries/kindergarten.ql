@@ -1,1 +1,1 @@
-[out:json];(node(51.283136,12.291668,51.393439,12.486447)[amenity=kindergarten];way(51.283136,12.291668,51.393439,12.486447)[amenity=kindergarten];);out center;>;out skel qt;
+[out:json];(node(51.245545,12.205489,51.425508,12.545030)[amenity=kindergarten];way(51.245545,12.205489,51.425508,12.545030)[amenity=kindergarten];);out center;>;out skel qt;
