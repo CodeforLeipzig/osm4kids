@@ -495,8 +495,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.411601,
-					51.321551
+					12.4117451,
+					51.3215324
 				]
 			},
 			"properties": {
@@ -508,7 +508,8 @@
 				"equipment": "['Sandspielfläche','Spielwiese','Findlinge','Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Lichtenbergweg / Güntzstraße",
 				"Wird geprüft durch": "René",
-				"Geprüft": "René"
+				"Geprüft": "René",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -601,8 +602,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.422109,
-					51.317151
+					12.4221484,
+					51.3170875
 				]
 			},
 			"properties": {
@@ -614,7 +615,8 @@
 				"equipment": "['Schattenplätze','Spielwiese','Bänke','Sandspielfläche','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Thiemstraße / VÃ¡clac-Neumann-Straße",
 				"Wird geprüft durch": "René",
-				"Geprüft": "René"
+				"Geprüft": "René",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -1676,8 +1678,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.381792,
-					51.286732
+					12.38176,
+					51.2868191
 				]
 			},
 			"properties": {
@@ -1689,7 +1691,8 @@
 				"equipment": "['Spielwiese','Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Im Dölitzer Holz",
 				"Wird geprüft durch": "Pascal",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -1762,8 +1765,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.389546,
-					51.29371
+					12.3897715,
+					51.2936831
 				]
 			},
 			"properties": {
@@ -1775,7 +1778,8 @@
 				"equipment": "['Sandspielflächen','Spielwiese','Bänke','Schattenplätze','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Gersterstraße",
 				"Wird geprüft durch": "Max",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -2018,8 +2022,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.4637168,
-					51.3051188
+					12.463902,
+					51.3054553
 				]
 			},
 			"properties": {
@@ -2031,7 +2035,8 @@
 				"equipment": "['Bänke','Parkmöglichkeit:','öffentliche Parkplätze sind vorhanden']",
 				"address": "Azaleenweg",
 				"Wird geprüft durch": "Max",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -2312,8 +2317,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.417721,
-					51.315725
+					12.4175641,
+					51.3157141
 				]
 			},
 			"properties": {
@@ -2325,7 +2330,8 @@
 				"equipment": "['Findlinge','Spielwiese','Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Ludolf-Colditz-Straße / Naunhofer Straße",
 				"Wird geprüft durch": "Pascal",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -2482,8 +2488,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.377253,
-					51.317104
+					12.3772196,
+					51.3171344
 				]
 			},
 			"properties": {
@@ -2495,7 +2501,8 @@
 				"equipment": "['Spielwiese','Bänke','Sandspielfläche','Findlinge','Schattenplätze','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Steinstraße / Bernhard-Göring-Straße",
 				"Wird geprüft durch": "Max",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -2503,8 +2510,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.374682,
-					51.319225
+					12.3747844,
+					51.3191754
 				]
 			},
 			"properties": {
@@ -2516,7 +2523,8 @@
 				"equipment": "['Spielwiese','Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Andreasstraße / Scharnhorststraße",
 				"Wird geprüft durch": "Max",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -2654,8 +2662,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.372676,
-					51.319101
+					12.3725856,
+					51.3191365
 				]
 			},
 			"properties": {
@@ -2667,7 +2675,8 @@
 				"equipment": "['Spielwiese','Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Hardenbergstraße/Karl-Liebknecht-Straße",
 				"Wird geprüft durch": "Max",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -2760,8 +2769,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.422832,
-					51.322194
+					12.4227718,
+					51.3221905
 				]
 			},
 			"properties": {
@@ -2773,7 +2782,8 @@
 				"equipment": "['Sandspielfläche','Spielwiese','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Oberdorfstraße",
 				"Wird geprüft durch": "Andy",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -2865,8 +2875,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.422955,
-					51.322789
+					12.4229166,
+					51.322818
 				]
 			},
 			"properties": {
@@ -2878,7 +2888,8 @@
 				"equipment": "['Sandspielfläche','Spielwiese','Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Sommerfelder Straße / Lochmannstraße ",
 				"Wird geprüft durch": "Andy",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -3139,8 +3150,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.397089,
-					51.325474
+					12.3969953,
+					51.3254856
 				]
 			},
 			"properties": {
@@ -3152,7 +3163,8 @@
 				"equipment": "['Spielwiese','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Linnéstraße / Phillip-Rosenthal-Straße",
 				"Wird geprüft durch": "Andy",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -3434,8 +3446,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.409591,
-					51.327166
+					12.4095903,
+					51.3271358
 				]
 			},
 			"properties": {
@@ -3447,7 +3459,8 @@
 				"equipment": "['Sandspielfläche','Spielwiese','Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Nobbeweg / Reinhold-Krüger-Straße",
 				"Wird geprüft durch": "Pascal",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -3541,8 +3554,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.401954,
-					51.328154
+					12.4018895,
+					51.3281447
 				]
 			},
 			"properties": {
@@ -3554,7 +3567,8 @@
 				"equipment": "['Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Oswaldstraße / Witzgallstraße",
 				"Wird geprüft durch": "Pascal",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -3774,8 +3788,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.403238,
-					51.333278
+					12.4032344,
+					51.3332596
 				]
 			},
 			"properties": {
@@ -3787,7 +3801,8 @@
 				"equipment": "['Spielwiese','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Eilenburger Straße / Albert-Schweitzer-Straße",
 				"Wird geprüft durch": "Robert",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -4031,8 +4046,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.400815,
-					51.333723
+					12.4008547,
+					51.3336867
 				]
 			},
 			"properties": {
@@ -4044,7 +4059,8 @@
 				"equipment": "['Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Eilenburger Straße / Reichpietschstraße",
 				"Wird geprüft durch": "Robert",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -4073,8 +4089,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.404011,
-					51.335397
+					12.4040123,
+					51.3355072
 				]
 			},
 			"properties": {
@@ -4086,7 +4102,8 @@
 				"equipment": "['Spielwiese','Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Sigismundstraße / Wittstockstraße",
 				"Wird geprüft durch": "Robert",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -4328,8 +4345,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.398671,
-					51.338037
+					12.39854,
+					51.3378605
 				]
 			},
 			"properties": {
@@ -4341,7 +4358,8 @@
 				"equipment": "['Sandspielfläche','Spielwiese','Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Crusiusstraße / Stephaniplatz",
 				"Wird geprüft durch": "Robert",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -4476,8 +4494,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.323686,
-					51.369548
+					12.3236203,
+					51.3695136
 				]
 			},
 			"properties": {
@@ -4489,7 +4507,8 @@
 				"equipment": "['Sandspielfläche','Spielwiese','Schattenplätze','Bänke','Parkmöglichkeit:','\\xd6ffentliche Parkplätze befinden sich am Hauptzugang zum Auensee.']",
 				"address": "östlicher Teil des Auensee",
 				"Wird geprüft durch": "Andy",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -5193,41 +5212,21 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.4038307,
-					51.3476367
+					12.4042231,
+					51.3480207
 				]
 			},
 			"properties": {
 				"town": "Leipzig",
-				"district": "Neustadt-Neuschönefeld,Ost",
+				"district": "Neustadt-Neuschönefeld, Ost",
 				"title": "Spielplatz Neustädter Markt - Ostseite",
 				"local_traffic": "['Straßenbahn: 1, 3, 8 (Haltestelle Hermann-Liebmann-Straße/Eisenbahnstraße)']",
 				"gaming_devices": "['Kletterhaus','Rutsche','Kletternetz']",
 				"equipment": "['Sandspielfläche','Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Neustädter Markt",
 				"Wird geprüft durch": "",
-				"Geprüft": ""
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					12.4038307,
-					51.3476367
-				]
-			},
-			"properties": {
-				"town": "Leipzig",
-				"district": "Neustadt-Neuschönefeld,Ost",
-				"title": "Spielplatz Neustädter Markt",
-				"local_traffic": "['Straßenbahn: 1, 3, 8 (Haltestelle Hermann-Liebmann-Straße/Eisenbahnstraße)','Bus: 70 (Haltestelle Hermann-Liebmann-Straße/Eisenbahnstraße)']",
-				"gaming_devices": "['Kletterpilze']",
-				"equipment": "['Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
-				"address": "Neustädter Markt ",
-				"Wird geprüft durch": "",
-				"Geprüft": ""
+				"Geprüft": "",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -5298,8 +5297,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.350589,
-					51.347965
+					12.3504674,
+					51.3481576
 				]
 			},
 			"properties": {
@@ -5311,7 +5310,8 @@
 				"equipment": "['Spielwiese','Schatten','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Eitingonstraße",
 				"Wird geprüft durch": "Robert",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -5701,8 +5701,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.358733,
-					51.357865
+					12.3587029,
+					51.3575869
 				]
 			},
 			"properties": {
@@ -5714,7 +5714,8 @@
 				"equipment": "['Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Platnerstraße / Stallbaumstraße",
 				"Wird geprüft durch": "Pascal",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -5869,8 +5870,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.416429,
-					51.369383
+					12.4163463,
+					51.3693634
 				]
 			},
 			"properties": {
@@ -5882,7 +5883,8 @@
 				"equipment": "['Spielwiese','Schattenplätze','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "Abtnaundorfer Straße / Heiterblickstraße",
 				"Wird geprüft durch": "Robert",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
@@ -6334,8 +6336,8 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					12.333516,
-					51.391904
+					12.3340847,
+					51.3915975
 				]
 			},
 			"properties": {
@@ -6347,7 +6349,8 @@
 				"equipment": "['Spielwiese','Bänke','Parkmöglichkeit:','öffentliche Parkplätze vorhanden']",
 				"address": "An der Schule",
 				"Wird geprüft durch": "Andy",
-				"Geprüft": "fixed"
+				"Geprüft": "fixed",
+				"compatible-to-osm": "true"
 			}
 		},
 		{
