@@ -1,4 +1,4 @@
-﻿/// <reference types="node_modules/@types/typescript/index.d.ts" />
+﻿/// <reference path="node_modules/@types/typescript/index.d.ts" />
 
 exports = module.exports = {};
 

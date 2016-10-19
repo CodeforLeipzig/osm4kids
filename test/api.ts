@@ -1,4 +1,4 @@
-/// <reference path="../typings/index.d.ts" />
+/// <reference path="../node_modules/@types/typescript/index.d.ts" />
 
 import chai = require('chai');
 import http = require('http');
