@@ -5,10 +5,9 @@ var exec = require('child_process').exec;
 var exec_this = "";
 
 if (os.platform() == ('win32' || 'win64')) {
-    exec_this = "node_modules\\.bin\\typings install && node_modules\\.bin\\tsc.cmd";
-}
-else {
-    exec_this = "./node_modules/.bin/typings install && ./node_modules/.bin/tsc";
+    exec_this = "node_modules\\.bin\\tsc.cmd";
+} else {
+    exec_this = "./node_modules/.bin/tsc";
 }
 
 exec(exec_this, (error, stdout, stderr) => {
