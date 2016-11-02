@@ -51,7 +51,7 @@
     "build": "tsc",
     "pretest": "./node_modules/.bin/tsc",
     "test": "./node_modules/.bin/mocha",
-    "postinstall": "node npm-postinstall",
+    "postinstall": "tsc",
     "tsc": "tsc",
     "tsc:w": "tsc -w"
   }
