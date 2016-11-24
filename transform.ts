@@ -1,5 +1,5 @@
 import fs = require('fs');
-import { baseName, pathSep } from "./helpers";
+import { baseName, pathSep, delete_file, write_file } from "./helpers";
 import * as cons from "./constants";
 
 var _ = require('lodash');
@@ -91,26 +91,13 @@ function transform_to_clean(complete_transform_dir: string) {
 
                         let target_fileName: string = file_to_transform.replace('.geojson', '_clean.geojson');
 
-                        fs.unlink(target_fileName, (err) => {
-                            if (err) {
-                                // throw err;
-                                console.log('not successfully deleted ' + target_fileName);
-                            }
-                            console.log('successfully deleted ' + target_fileName);
-                        });
+                        delete_file(target_fileName);
 
                         // convert datastructure to valid geojson
                         let retArr_geoJson: any = geojson.parse(retArr, { Point: ['latitude', 'longitude'] });
 
                         // write file with indention
-                        fs.writeFile(target_fileName, JSON.stringify(retArr_geoJson, null, 2), (err) => {
-                            if (err) {
-                                // throw err;
-                                console.log('not successfully created ' + target_fileName);
-                            }
-                            console.log('successfully created ' + target_fileName);
-
-                        });
+                        write_file(target_fileName, retArr_geoJson);
                     }
                 });
 
@@ -168,23 +155,9 @@ function merge_overpass_with_kidsle_kb(complete_transform_dir: string) {
                 let return_array_geojson: any = geojson.parse(return_Array, { Point: ['latitude', 'longitude'] });
                 let target_fileName: string = complete_transform_dir + pathSep() + product + cons.ENDING_OP_CLEAN_MERGE_KIDSLE;
 
-                fs.unlink(target_fileName, (err) => {
-                    if (err) {
-                        // throw err;
-                        console.log('not successfully deleted ' + target_fileName);
-                    }
-                    console.log('successfully deleted ' + target_fileName);
-                });
-
-
-                fs.writeFile(target_fileName, JSON.stringify(return_array_geojson, null, 2), (err) => {
-                    if (err) {
-                        // throw err;
-                        console.log('not successfully created ' + target_fileName);
-                    }
-                    console.log('successfully created ' + target_fileName);
-
-                });
+                delete_file(target_fileName);
+                
+                write_file(target_fileName, return_array_geojson);
             }
         }
     });
